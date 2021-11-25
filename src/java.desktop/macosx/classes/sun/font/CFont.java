@@ -233,9 +233,7 @@ public final class CFont extends PhysicalFont implements FontSubstitution {
             fonts = new PhysicalFont[idx];
             System.arraycopy(orig, 0, fonts, 0, idx);
         }
-        CompositeFont compFont = new CompositeFont(fonts);
-        compFont.mapper = new CCompositeGlyphMapper(compFont);
-        return compFont;
+        return new CompositeFont(fonts);
     }
 
     private CompositeFont compFont;
