@@ -2884,6 +2884,15 @@ public class Font implements java.io.Serializable
      */
     public static final int LAYOUT_NO_LIMIT_CONTEXT = 4;
 
+    /**
+     * A flag to layoutGlyphVector requesting to disable the detection of paired
+     * characters when splitting text into fragments belonging to different
+     * scripts. By default, a 'closing' punctuation character is always assigned
+     * the same script as the matching 'opening' character.
+     * @since 19
+     */
+    public static final int LAYOUT_NO_PAIRED_CHARS_SCRIPT_MATCHING = 8;
+
 
     private static void applyTransform(AffineTransform trans, AttributeValues values) {
         if (trans == null) {
